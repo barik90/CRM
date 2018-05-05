@@ -2,7 +2,7 @@ package pl.coderslab.crm.model;
 
 import java.sql.Date;
 
-public class Order {
+public class Orders {
 	private int id;
 	private Date dateOfAcceptRepair;
 	private Date plannedStartDateOfTheRepair;
@@ -10,16 +10,16 @@ public class Order {
 	private int employee_id;
 	private String descriptionOfTheProblem;
 	private String descriptionRepair;
-	private int status_id; // chyba będzie trzeba zrobić tablicę stringów
+	private int status_id;
 	private int vehicle_id;
 	private double repairCost;
 	private double partsCost;
 	private double costOfManHour;
-	private int manHour;
+	private int quantityOfManHour;
 
-	public Order(int id, Date dateOfAcceptRepair, Date plannedStartDateOfTheRepair, Date dateOfRepairStarted,
+	public Orders(int id, Date dateOfAcceptRepair, Date plannedStartDateOfTheRepair, Date dateOfRepairStarted,
 			int employee_id, String descriptionOfTheProblem, String descriptionRepair, int status_id, int vehicle_id,
-			double repairCost, double partsCost, double costOfManHour, int manHour) {
+			double repairCost, double partsCost, double costOfManHour, int quantityOfManHour) {
 		super();
 		this.id = id;
 		this.dateOfAcceptRepair = dateOfAcceptRepair;
@@ -33,12 +33,12 @@ public class Order {
 		this.repairCost = repairCost;
 		this.partsCost = partsCost;
 		this.costOfManHour = costOfManHour;
-		this.manHour = manHour;
+		this.quantityOfManHour = quantityOfManHour;
 	}
 
-	public Order(Date dateOfAcceptRepair, Date plannedStartDateOfTheRepair, Date dateOfRepairStarted, int employee_id,
+	public Orders(Date dateOfAcceptRepair, Date plannedStartDateOfTheRepair, Date dateOfRepairStarted, int employee_id,
 			String descriptionOfTheProblem, String descriptionRepair, int status_id, int vehicle_id, double repairCost,
-			double partsCost, double costOfManHour, int manHour) {
+			double partsCost, double costOfManHour, int quantityOfManHour) {
 		super();
 		this.dateOfAcceptRepair = dateOfAcceptRepair;
 		this.plannedStartDateOfTheRepair = plannedStartDateOfTheRepair;
@@ -51,10 +51,10 @@ public class Order {
 		this.repairCost = repairCost;
 		this.partsCost = partsCost;
 		this.costOfManHour = costOfManHour;
-		this.manHour = manHour;
+		this.quantityOfManHour = quantityOfManHour;
 	}
 
-	public Order() {
+	public Orders() {
 	}
 
 	public int getId() {
@@ -153,12 +153,12 @@ public class Order {
 		this.costOfManHour = costOfManHour;
 	}
 
-	public int getManHour() {
-		return manHour;
+	public int getQuantityOfManHour() {
+		return quantityOfManHour;
 	}
 
-	public void setManHour(int manHour) {
-		this.manHour = manHour;
+	public void setQuantityOfManHour(int quantityOfManHour) {
+		this.quantityOfManHour = quantityOfManHour;
 	}
 
 	@Override
@@ -167,8 +167,8 @@ public class Order {
 				+ plannedStartDateOfTheRepair + ", dateOfRepairStarted=" + dateOfRepairStarted + ", employee_id="
 				+ employee_id + ", descriptionOfTheProblem=" + descriptionOfTheProblem + ", descriptionRepair="
 				+ descriptionRepair + ", status_id=" + status_id + ", vehicle_id=" + vehicle_id + ", repairCost="
-				+ repairCost + ", partsCost=" + partsCost + ", costOfManHour=" + costOfManHour + ", manHour=" + manHour
-				+ "]";
+				+ repairCost + ", partsCost=" + partsCost + ", costOfManHour=" + costOfManHour + ", quantityOfManHour="
+				+ quantityOfManHour + "]";
 	}
 
 }

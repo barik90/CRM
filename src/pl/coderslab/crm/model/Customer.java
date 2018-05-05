@@ -7,23 +7,20 @@ public class Customer {
 	private String name;
 	private String surname;
 	private Date dateOfBirth;
-	private int vehicleId;
 
-	public Customer(int id, String name, String surname, Date dateOfBirth, int vehicleId) {
+	public Customer(int id, String name, String surname, Date dateOfBirth) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.surname = surname;
 		this.dateOfBirth = dateOfBirth;
-		this.vehicleId = vehicleId;
 	}
 
-	public Customer(String name, String surname, Date dateOfBirth, int vehicleId) {
+	public Customer(String name, String surname, Date dateOfBirth) {
 		super();
 		this.name = name;
 		this.surname = surname;
 		this.dateOfBirth = dateOfBirth;
-		this.vehicleId = vehicleId;
 	}
 
 	public Customer() {
@@ -61,18 +58,9 @@ public class Customer {
 		this.dateOfBirth = dateOfBirth;
 	}
 
-	public int getVehicleId() {
-		return vehicleId;
-	}
-
-	public void setVehicleId(int vehicleId) {
-		this.vehicleId = vehicleId;
-	}
-
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", surname=" + surname + ", dateOfBirth=" + dateOfBirth
-				+ ", vehicleId=" + vehicleId + "]";
+		return "Customer [id=" + id + ", name=" + name + ", surname=" + surname + ", dateOfBirth=" + dateOfBirth + "]";
 	}
 
 }

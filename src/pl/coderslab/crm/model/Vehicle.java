@@ -9,9 +9,10 @@ public class Vehicle {
 	private Date yearOfProduction;
 	private String registrationNumber;
 	private Date dateOfTheNextTechnicalInspection;
+	private int customer_id;
 
 	public Vehicle(int id, String model, String mark, Date yearOfProduction, String registrationNumber,
-			Date dateOfTheNextTechnicalInspection) {
+			Date dateOfTheNextTechnicalInspection, int customer_id) {
 		super();
 		this.id = id;
 		this.model = model;
@@ -19,16 +20,18 @@ public class Vehicle {
 		this.yearOfProduction = yearOfProduction;
 		this.registrationNumber = registrationNumber;
 		this.dateOfTheNextTechnicalInspection = dateOfTheNextTechnicalInspection;
+		this.customer_id = customer_id;
 	}
 
 	public Vehicle(String model, String mark, Date yearOfProduction, String registrationNumber,
-			Date dateOfTheNextTechnicalInspection) {
+			Date dateOfTheNextTechnicalInspection, int customer_id) {
 		super();
 		this.model = model;
 		this.mark = mark;
 		this.yearOfProduction = yearOfProduction;
 		this.registrationNumber = registrationNumber;
 		this.dateOfTheNextTechnicalInspection = dateOfTheNextTechnicalInspection;
+		this.customer_id = customer_id;
 	}
 
 	public Vehicle() {
@@ -82,11 +85,19 @@ public class Vehicle {
 		this.dateOfTheNextTechnicalInspection = dateOfTheNextTechnicalInspection;
 	}
 
+	public int getCustomer_id() {
+		return customer_id;
+	}
+
+	public void setCustomer_id(int customer_id) {
+		this.customer_id = customer_id;
+	}
+
 	@Override
 	public String toString() {
 		return "Vehicle [id=" + id + ", model=" + model + ", mark=" + mark + ", yearOfProduction=" + yearOfProduction
 				+ ", registrationNumber=" + registrationNumber + ", dateOfTheNextTechnicalInspection="
-				+ dateOfTheNextTechnicalInspection + "]";
+				+ dateOfTheNextTechnicalInspection + ", customer_id=" + customer_id + "]";
 	}
 
 }
