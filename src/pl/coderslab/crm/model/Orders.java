@@ -1,5 +1,6 @@
 package pl.coderslab.crm.model;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 
 public class Orders {
@@ -12,14 +13,14 @@ public class Orders {
 	private String descriptionRepair;
 	private int status_id;
 	private int vehicle_id;
-	private double repairCost;
-	private double partsCost;
-	private double costOfManHour;
+	private BigDecimal repairCost;
+	private BigDecimal partsCost;
+	private BigDecimal costOfManHour;
 	private int quantityOfManHour;
 
 	public Orders(int id, Date dateOfAcceptRepair, Date plannedStartDateOfTheRepair, Date dateOfRepairStarted,
 			int employee_id, String descriptionOfTheProblem, String descriptionRepair, int status_id, int vehicle_id,
-			double repairCost, double partsCost, double costOfManHour, int quantityOfManHour) {
+			BigDecimal repairCost, BigDecimal partsCost, BigDecimal costOfManHour, int quantityOfManHour) {
 		super();
 		this.id = id;
 		this.dateOfAcceptRepair = dateOfAcceptRepair;
@@ -37,8 +38,8 @@ public class Orders {
 	}
 
 	public Orders(Date dateOfAcceptRepair, Date plannedStartDateOfTheRepair, Date dateOfRepairStarted, int employee_id,
-			String descriptionOfTheProblem, String descriptionRepair, int status_id, int vehicle_id, double repairCost,
-			double partsCost, double costOfManHour, int quantityOfManHour) {
+			String descriptionOfTheProblem, String descriptionRepair, int status_id, int vehicle_id,
+			BigDecimal repairCost, BigDecimal partsCost, BigDecimal costOfManHour, int quantityOfManHour) {
 		super();
 		this.dateOfAcceptRepair = dateOfAcceptRepair;
 		this.plannedStartDateOfTheRepair = plannedStartDateOfTheRepair;
@@ -129,27 +130,27 @@ public class Orders {
 		this.vehicle_id = vehicle_id;
 	}
 
-	public double getRepairCost() {
+	public BigDecimal getRepairCost() {
 		return repairCost;
 	}
 
-	public void setRepairCost(double repairCost) {
+	public void setRepairCost(BigDecimal repairCost) {
 		this.repairCost = repairCost;
 	}
 
-	public double getPartsCost() {
+	public BigDecimal getPartsCost() {
 		return partsCost;
 	}
 
-	public void setPartsCost(double partsCost) {
+	public void setPartsCost(BigDecimal partsCost) {
 		this.partsCost = partsCost;
 	}
 
-	public double getCostOfManHour() {
+	public BigDecimal getCostOfManHour() {
 		return costOfManHour;
 	}
 
-	public void setCostOfManHour(double costOfManHour) {
+	public void setCostOfManHour(BigDecimal costOfManHour) {
 		this.costOfManHour = costOfManHour;
 	}
 
